@@ -2,7 +2,6 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 #[tokio::main]
-async fn main() -> Result<(), std::io::Error> {
-    tauri_app::run::run().await?;
-    Ok(())
+async fn main() {
+    tauri_app::run::run().await.expect("feailed");
 }
